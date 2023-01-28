@@ -5,16 +5,18 @@ const binarySearch = (numbers, number) => {
   while (left <= right) {
     countOfSteps += 1
 
-    const index = parseInt((left + right) / 2)
+    const middle = parseInt((left + right) / 2)
 
-    // console.log(left, index, right)
+    // console.log(left, middle, right)
 
-    if (numbers[index] > number) {
-      right = index - 1
-    } else if (numbers[index] < number) {
-      left = index + 1
-    } else if (numbers[index] === number) {
-      return [index, countOfSteps]
+    if (numbers[middle] > number) {
+      right = middle - 1
+    } else if (numbers[middle] < number) {
+      left = middle + 1
+    } else if (numbers[middle] === number) {
+      return [middle, countOfSteps]
+    } else {
+      return null
     }
   }
 
