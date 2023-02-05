@@ -23,11 +23,11 @@ Average: O(n log n)
 
 2.  ##### Select pivot
 
-    In the GIF, the pivot is chosen as the median of the array values. I take the first element of the array as the pivot.
+    In the GIF, the pivot is chosen as the median of the array values. I take the random element of the array as the pivot. Thereby i get average stack length **log n** anyway.
 
     ***
 
-        const pivot = array[0]
+        const pivot = array[Math.floor(Math.random() * array.length)]
 
     ***
 

@@ -9,7 +9,7 @@ const quickSort = (array) => {
 
   if (array.length < 2) return array
 
-  const pivot = array[0]
+  const pivot = array[Math.floor(Math.random() * array.length)]
 
   let left = []
   let right = []
