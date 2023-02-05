@@ -1,2 +1,5 @@
 # file with my plans
 need-to-implement
+
+# default package.json with "type": "module"
+BFS/package.json
