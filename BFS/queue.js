@@ -1,4 +1,4 @@
-const getQueue = () => {
+const createQueue = () => {
   let queue = []
   let length = 0
 
@@ -11,14 +11,18 @@ const getQueue = () => {
       queue = [...queue.slice(1)]
     },
 
+    getFirst: () => {
+      return queue[0]
+    },
+
     isEmpty: () => {
       return queue.length === 0 ? true : false
     },
 
-    print: () => {
-      console.log(queue)
+    getValues: () => {
+      return queue
     },
   }
 }
 
-export default getQueue
+export default createQueue
