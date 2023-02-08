@@ -1,6 +1,5 @@
 const createQueue = () => {
   let queue = []
-  let length = 0
 
   return {
     push: (value) => {
