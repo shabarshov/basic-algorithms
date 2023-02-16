@@ -11,31 +11,30 @@ Average: O(log n)
 
 #### Steps:
 
-1.  ##### Set left, middle and right
+1.  ##### Set left and right
 
     No comments
 
     ***
 
-        let [left, right] = [0, numbers.length]
-        const middle = parseInt((left + right) / 2)
+        let [left, right] = [0, numbers.length - 1]
 
     ***
 
 2.  ##### Decrease Range
 
-    We must determine which part of our sorted array does not contain the element we are looking for.
+    We must determine which part of our sorted array does not contain the element we are looking for. Also we set middle.
 
     ***
+
+        const middle = parseInt((left + right) / 2)
 
         if (numbers[middle] > number) {
             right = middle - 1
         } else if (numbers[middle] < number) {
             left = middle + 1
-        } else if (numbers[middle] === number) {
-            return [middle, countOfSteps]
         } else {
-            return null
+            return middle
         }
 
     ***
@@ -53,8 +52,6 @@ Average: O(log n)
                 right = middle - 1
             } else if (numbers[middle] < number) {
                 left = middle + 1
-            } else if (numbers[middle] === number) {
-                return [middle, countOfSteps]
             } else {
                 return null
             }
