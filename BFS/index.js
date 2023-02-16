@@ -18,13 +18,13 @@ const findFriendByName = (friend, name) => {
   return false
 }
 
-const friend4 = createFriend("Dima")
-const friend5 = createFriend("Denis")
-const friend6 = createFriend("Semen")
+const friend4 = createFriend("friend4")
+const friend5 = createFriend("friend5")
+const friend6 = createFriend("friend6")
 
-const friend3 = createFriend("Vadim", friend5, friend6)
-const friend2 = createFriend("Petr", friend4)
+const friend3 = createFriend("friend3", friend5, friend6)
+const friend2 = createFriend("friend2", friend4)
 
-const friend1 = createFriend("Alexey", friend2, friend3)
+const friend1 = createFriend("friend1", friend2, friend3)
 
-console.log(findFriendByName(friend1, "Dima"))
+console.log(findFriendByName(friend1, "friend5"))
