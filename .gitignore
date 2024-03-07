@@ -1,5 +1,3 @@
-# file with my plans
-need-to-implement
+node_modules
 
-# default package.json with "type": "module"
-BFS/package.json
+.husky/_

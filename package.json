@@ -1,0 +1,17 @@
+{
+  "name": "basic-algorithms",
+  "type": "module",
+  "scripts": {
+    "test": "jest",
+    "prepare": "husky"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^5.4.2"
+  },
+  "devDependencies": {
+    "husky": "^9.0.11",
+    "ts-jest": "^29.1.2",
+    "ts-node": "^10.9.2"
+  }
+}
