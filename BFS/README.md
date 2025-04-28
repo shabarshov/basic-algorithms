@@ -11,7 +11,7 @@
 #### For the algorithm, I implemented a createFriend() and a createQueue() functions:
 
 ---
-
+```ts
     const createFriend = (name = "no name", ...friends) => {
         let _name = name
         let _friends = [...friends]
@@ -30,9 +30,9 @@
             },
         }
     }
-
+```
 ---
-
+```ts
     const createQueue = () => {
         let queue = []
 
@@ -60,7 +60,7 @@
     }
 
 ---
-
+```
 #### Steps:
 
 1.  ##### Preparation
@@ -68,7 +68,7 @@
     We need a graph structure and a starting point to apply the algorithm:
 
     ***
-
+    ```ts
         const friend4 = createFriend("friend4")
         const friend5 = createFriend("friend5")
         const friend6 = createFriend("friend6")
@@ -77,7 +77,7 @@
         const friend2 = createFriend("friend2", friend4)
 
         const friend1 = createFriend("friend1", friend2, friend3)
-
+    ```ts
     ***
 
 2.  ##### Working with graph vertices
@@ -85,7 +85,7 @@
     Checking out friend. If he does not fit, put all his friends in the queue:
 
     ***
-
+    ```ts
         const currentFriend = queue.getFirst()
 
         if (currentFriend.getName() === name) {
@@ -94,7 +94,7 @@
             queue.shift()
             currentFriend.getFriends().map((f) => queue.push(f))
         }
-
+    ```ts
     ***
 
 3.  ##### While
@@ -102,7 +102,7 @@
     We put this in a loop and get our algorithm:
 
     ***
-
+    ```ts
         const findFriendByName = (friend, name) => {
             const queue = createQueue()
             queue.push(friend)
@@ -119,3 +119,5 @@
 
             return false
         }
+    ```
+    ***
